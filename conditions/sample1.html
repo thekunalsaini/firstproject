@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function getDay(){
+        var day = document.getElementById("day").value;
+        switch(parseInt(day)){//day is expression
+            case 1:
+                    alert("Monday");
+                    break;
+            case 2:
+                    alert("Tuesday");
+                    break;
+            case 3:
+                    alert("Wed");
+                    break;
+            case 4:
+                    alert("Thur");
+                    break;
+            case 5:
+                    alert("Fri");
+                    break;
+            case 6:
+                    alert("Sat");
+                    break;
+            case 7:
+                    alert("Sun");
+                    break;
+            default:
+                    alert("enter b/w 1 and 7");
+                    break;
+        }
+    }
+    
+</script>
+<body>
+    <div>
+        Enter Day : <input type="text" id="day"/> <br/>
+        <input type="submit" onclick="getDay()" value="Get Day"/>
+        
+    </div>
+</body>
+</html>

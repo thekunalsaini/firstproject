@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //object through constructor
+    //constructor without a class
+    function User(email,pass){
+        this.email=email;//this refer to cyrrent class context new variavble local
+        this.pass=pass;
+    }
+//js class is similar to constructor function (es6 come class)
+    let u1 = new User("alex@","123");
+    let u2 = new User("Lol@","123");
+    console.log(u1.email +" "+u1.pass);
+    console.log(u2.email +" "+u2.pass);
+    class Use{
+        constructor(email,password){
+            this.email=email;
+            this.password=password;
+        }
+        getUser(){
+            console.log(this.email+" "+this.password);
+        }
+    }
+    const u3=new Use('lol','123');
+    u3.getUser();
+</script>
+<body>
+    <h1>JS Objects</h1>
+</body>
+</html>

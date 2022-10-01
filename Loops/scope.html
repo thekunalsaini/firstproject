@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //let is a blocked scoped
+    let num = 8;
+    function welcome(){
+        //var is function scoped
+        //let num=8;
+        var msg = 'hello';
+        num=5;
+        console.log(msg);
+        console.log("inside"+num);
+    }
+    console.log("outside"+num);
+    //console.log(msg);
+    welcome();
+
+    let msg ="fuygyuguigiu";
+    console.log(msg.length);
+    console.log(msg.indexOf("uy"));
+    console.log(msg.startsWith("uy"));
+    console.log(msg.endsWith("uy"));
+    console.log(msg.toLowerCase());
+    console.log(msg.toUpperCase());
+    //array literal[]
+    const names = ["lol","pol","jhol"];
+    for(var i=0;i<names.length;i++)
+    {
+        console.log(names[i]);
+    }
+    const name= new Array("lol","pol","jhol");
+    for(var i=0;i<name.length;i++)
+    {
+        console.log(name[i]);
+    }
+    console.log("==============================");
+    name.push("lollol");
+    name.pop("lollol");
+    for(var i=0;i<name.length;i++)
+    {
+        console.log(name[i]);
+    }
+</script>
+<body>
+    <h2>JS </h2>
+</body>
+</html>

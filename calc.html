@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+</head>
+<script>
+    function addition(){
+        var number1 = document.getElementById("numb1").value;
+        var number2 = document.getElementById("numb2").value;
+        var res1 = parseInt(number1)+parseInt(number2);
+
+        document.getElementById("res1").value=res1;
+    }
+
+    function subtract(){
+        var number3 = document.getElementById("numb3").value;
+        var number4 = document.getElementById("numb4").value;
+        var res2 = parseInt(number3)-parseInt(number4);
+
+        document.getElementById("res2").value=res2;
+    }
+
+    function division(){
+        var number5 = document.getElementById("numb5").value;
+        var number6 = document.getElementById("numb6").value;
+        var res3 = parseInt(number5)/parseInt(number6);
+
+        document.getElementById("res3").value=res3;
+    }
+
+    function multiplication(){
+        var number7 = document.getElementById("numb7").value;
+        var number8 = document.getElementById("numb8").value;
+        var res4 = parseInt(number7)*parseInt(number8);
+
+        document.getElementById("res4").value=res4;
+    }
+
+    function calreset(){
+        document.getElementById("numb7").value="";
+        document.getElementById("numb8").value="";
+        document.getElementById("res4").value="";
+    }
+</script>
+<body>
+<div id="res">
+    <h1>Hi! I'm Calculator</h1>
+    <hr />
+    <br/>
+    <input type="number" id="numb1" /> + 
+    <input type="number" id="numb2" /> =
+    <input type="number" id="res1" /> <br /> <br />
+    <input type="submit" value="Add" onclick="addition()"/> 
+    <hr />
+    <br/>
+    <input type="number" id="numb3" /> - 
+    <input type="number" id="numb4" /> =
+    <input type="number" id="res2" /> <br /> <br />
+    <input type="submit" value="Subtract" onclick="subtract()"/> 
+    <hr />
+    <br/>
+    <input type="number" id="numb5" /> / 
+    <input type="number" id="numb6" /> =
+    <input type="number" id="res3" /> <br /> <br />
+    <input type="submit" value="Division" onclick="division()"/> 
+    <hr />
+    <br/>
+    <input type="number" id="numb7" /> * 
+    <input type="number" id="numb8" /> =
+    <input type="number" id="res4" /> <br /> <br />
+    <input type="submit" value="Multiplication" onclick="multiplication()"/> 
+    <hr />
+</div>
+<br/>
+<input type="submit" value="reset" onclick="calreset()"/>
+</body>
+</html>

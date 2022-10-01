@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    body{
+        background-color: lightblue;
+    }
+    #myForm{
+        border: 1px solid white;
+        width: fit-content;
+        padding: 20px 20px 20px 20px;
+        margin: auto;
+        text-align: center;
+        margin-top: 10%;
+        color: white;
+        background-color: aquamarine;
+    
+    }
+    button{
+        background-color: white;
+        font-weight: bold;
+        border: none;
+        color: lightblue;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+    button:hover {
+        background-color: aqua;
+    }
+
+</style>
+<script>
+    function validate(){
+        var email = document.getElementById("email").value;
+        var pwd = document.getElementById("password").value;
+        alert(email + " " + pwd);
+        if(email=="admin" && pwd=="admin")
+        {
+            alert("valid user")
+        }
+        else{
+            alert("Invalid credentials,user is not valid");
+        }
+
+
+
+    }
+    function reset_form(){
+        document.getElementById("myForm").reset();
+    }
+</script>
+<body>
+    <div>
+        
+        <form id="myForm">
+            <h1>Login</h1>
+            Username : <input type="text" id="email"/><br/><br/>
+            Password : <input type="password" id="password"/><br/><br/>
+            <button type="button" onclick="validate()" value="validate">validate</button><!--not submit bcz it change state-->
+            <button type="button" onclick="reset_form()" value="reset">reset</button>
+        </form>
+    </div>
+</body>
+</html>

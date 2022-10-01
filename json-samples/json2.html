@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const jsonData = '{"name":"alex","age":22}'
+    console.log(typeof(jsonData))
+    const obj = JSON.parse(jsonData);//receiving request in string format and we parse it and it will be converted to js object
+    console.log(typeof(obj))
+    console.log(obj.name);
+    console.log(obj.age);
+    const str = JSON.stringify(obj)//to string
+    console.log(typeof(str))
+    console.log(str);
+
+    
+</script>
+<body>
+    <h2>JSON =>  JS Objects</h2>
+</body>
+</html>

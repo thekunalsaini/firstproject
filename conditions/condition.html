@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function validate(){
+        var age = document.getElementById("age").value;
+        if(age>=18)
+            alert("eligible")
+        else
+            alert("not eligible!!!!")
+    }
+    function getPercentage(){
+        var percent = document.getElementById("percentage").value;
+        if(percent>=80 && percent<=100)
+        {
+            alert("first");
+        } else if(percent<80 && percent>=50){
+            alert("second");
+        }else if(percent<50 && percent>=0){
+            alert("third");
+        } else {
+            alert("enter b/w 1 to 100");
+        }
+    }
+</script>
+<body>
+    <div>
+        Enter Age : <input type="text" id="age"/> <br/>
+        <input type="submit" onclick="validate()"/>
+        <br/><br/>
+        Percent : <input type="text" id="percentage"/><br/>
+        <input type="submit" onclick="getPercentage()" value="Get Value"/>
+    </div>
+</body>
+</html>
